@@ -1,0 +1,61 @@
+Question,Answer
+Firstname, Henry 
+Lastname, McKinney 
+1a, Team 315 
+1b, 4
+1c, OT / 4 
+1d, 3
+1e,"leave blank here, visuals will be checked in the notebook"
+2a, 81408
+2b, 15
+2c,"leave blank here, visuals will be checked in the notebook"
+2d, Flip the Y axis
+2e,"leave blank here, visuals will be checked in the notebook"
+3a,"leave blank here, visuals will be checked in the notebook"
+3b, 18.8
+3c, OZ was hardest to complete passes in. 
+Likely because there is the most on puck pressure. 
+Teams will back off, or track back in defensive posture allowing 
+for a team in the DZ with possesion
+3d, 92.59%
+4a, 35.57 feet 
+4b, -1.46
+4c, Based on the minimal sample size I wouldn't put much weight into these metrics. 
+It seems these shots are just above the top of the circle, and also likely classified as "Low danger chances." 
+It seems based on this game that both goalies let in some floaters. If the trend for either goalie continued overtime,
+it'd seem that their overall save % would reflect that. If their save % remained high, but in this area (or any for that matter) remained lower than their overall save %,
+that would be something to look into as a development coach, and to exploit as an opposing team.
+5a, 5 shots with shot assists 
+5b, Player ID 10534 
+5c,"leave blank here, visuals will be checked in the notebook"
+5d, 3.27 seconds avg 
+5e, Player ID 112050
+6a, Team ID 311
+6b, 3.67 xG
+6c, At a surface level this implies there were breakdowns by team 311 since they were expected to win. The shots were about equal so one would point to goal tending first, then maybe defensive breakdowns. However, defensive breakdowns would likely increase the xG of team 315 so we could first look to see if the goalie let in goals that should stay out. 
+7a,"(please present the names of your predictors here in a python list from most predictive to least, for example: [‘highest’, ‘middle’, ‘lowest’])"
+7b, I chose to use a logistic regression technique for an expected goals model because of its usefulness in assigning probabilites to events with binary (yes/no) outcome such as a goal.  
+
+Coach, 
+Based on this game, the three most import factors leading to goals were: high danger tape to tape passes, shots from a  high danger area (centerPoint), when player 79380 or 109964 touchd the puck.
+
+It's only one game, but if it represents what your staff also saw, then that gives our data team confidence to use the model we built to provide your guys with supplementary information.
+
+Based on your post game video analysis, did you and your staff feel that shots from the centerPoint and tape to tape passes to dangerzones led to the most dagnerous scoring chances for both teams. Additionally, did you feel players 79380 and 109964 created the most scoring chances?
+
+If so, our models align with what your staff saw, and are prediciting goals well. We can build them out with more games and come back with more robust metrics that should predict goals.
+
+Since these metrics (where passes come from and go to, where shots come from, and who shoots the puck) are the best predictors of goals. We can provide you with a simple report for your prescout, and a postgame breakdown, with those goal preidcitng metrics, which should help your team in preparing for and breaking down games.
+7c, ['Random Forest', 'Logistic Regression', 'XGBoost']
+7d, The Random Forest utilizes multiple decisions tress which make it great for regression questions and large complex data sets. It is known for reducing overfitting, while adding random variablity, which hockey has a lot of (puck luck). There aren't many statistical anomolies (5 sigma +) in hockey so choosing a staple model that utilizes standard gaussian process is good for hockey, since the sport falls under the mediocristan category (as opposed to extremistan (5+ sigma events))
+
+The Logistic Regression is another gaussian process that is suits mediocristan subjects. As mentioned, its great for assigning probabilities to binary outcomes (goals). Moreover, it is great for measuring coefficients and their contribution to the outcome. This makes it easy to interpret the data and tweak if one variable contributes too much to the outcome and skews it.
+
+XGBoost is known for its ability to handle large and complex data sets. As mentioned above, you can tune the parameters of the model to allow it to more accuratley reflect what is occurs on the ice, essentially guiding the model. It is a well known model type in the predictive analytics space.
+8a, I didn't follow the draft that deeply being honest.
+8b, N/A
+8c, Steven Stamkos 
+8d, This is a bit of a hot take but at 8 x 8 he is not worth that money. He is 34, was 3rd in the leauge last year for power play goals (power play merchant), and was -21 last year. He might be good to start in "goodwill" or intangibles, but from a longevity, and defensive perspective, he is going down hill. Moroever, if he can't score 5v5 and continues to be a defensive liability, it wont help Nashville win in the post season. I say he has 3 years to prove me wrong, years 5,6,7 of that contract could be bad, to bought out. Pureley an investment on "goodwill".
+8e, To predict the number of shot attempts Alex Ovechkin is likely to have on a given night, I would analyze his historical game data to calculate his average shots per game over different periods of his career. I'd consider factors such as the opposing team's defensive strength and penalty kill efficiency. Other variables, such as whether the game is home or away, Ovechkin's recent form, and the current point in the season (e.g., early, mid, or late) can also influence his shot attempts. By creating a regression model or using machine learning techniques like Random Forests, I could identify and weigh these variables to estimate shot attempts accurately. I'd also incorporate game-day factors such as lineup changes, opponent injuries, and specific matchups against defensemen or goaltenders to refine predictions further. Most importantly I'd need to continuously update the model with real-time data so predictions remain relevant and accurate. Mainly I would look for the highest historical correlations, and look at all of the betting lines, as the market is pretty efficient, taking both of those and continously fine tuning them would likely lead to pretty accurate outcomes.
+8f, Megan Keller 
+8g, At +9 with 15 points in 24 games, Megan Keller has the best stat combinations in the top scoreres. The top D scorer was -6.
